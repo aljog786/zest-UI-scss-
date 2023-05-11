@@ -1,0 +1,19 @@
+{
+  "name": "zest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aljog786/zest-UI-scss-.git"
+  },
+  "author": "me",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aljog786/zest-UI-scss-/issues"
+  },
+  "homepage": "https://github.com/aljog786/zest-UI-scss-#readme"
+}

@@ -1,0 +1,26 @@
+.hero {
+
+  &_img {
+    // position: relative;
+    background-image: url("https://www.zestmoney.in/images/newhomeBanner.png");
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    &::before {
+      content: "";
+      position: absolute;
+    background-image: url("https://www.zestmoney.in/images/newhomeBannermob.png");
+
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+      top:0;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  // &_text{
+
+  // }
+}

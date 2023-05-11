@@ -1,0 +1,41 @@
+// @import 'mixins';
+
+html{
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*,*::before,*::after{
+    box-sizing: inherit;
+}
+a{
+    text-decoration: none;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+.flex {
+    display: flex;
+
+    &-jc-c{
+        justify-content: center;
+    }
+    &-jc-sb{
+        justify-content:space-between;
+    }
+    &-ai-c{
+        align-items:center;
+    }
+}
+.hide-in-mob{
+    @include breakpoint-down(medium){
+      display: none;
+    }
+}
+.hide-in-desk {
+    @include breakpoint-up(large){
+        display: none;
+      }
+}

@@ -1,0 +1,195 @@
+.has-fade {
+  visibility: hidden;
+}
+
+@keyframes fade-in {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  1% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+.fade-in {
+  animation: fade-in 200ms ease-in-out forwards;
+}
+
+@keyframes fade-out {
+  from {
+    visibility: visible;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 0;
+  }
+  to {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+.fade-out {
+  animation: fade-out 200ms ease-in-out forwards;
+}
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  display: flex;
+}
+.flex-jc-c {
+  justify-content: center;
+}
+.flex-jc-sb {
+  justify-content: space-between;
+}
+.flex-ai-c {
+  align-items: center;
+}
+
+@media (max-width: 63.9375em) {
+  .hide-in-mob {
+    display: none;
+  }
+}
+
+@media (min-width: 64em) {
+  .hide-in-desk {
+    display: none;
+  }
+}
+
+.header {
+  background-color: transparent;
+}
+.header.open .header_toggle > span:first-child {
+  transform: rotate(45deg);
+}
+.header.open .header_toggle > span:nth-child(2) {
+  opacity: 0;
+}
+.header.open .header_toggle > span:last-child {
+  transform: rotate(-45deg);
+}
+.header .overlay {
+  opacity: 0;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+.header nav {
+  padding: 3rem 2rem 2rem 2rem;
+  position: relative;
+}
+.header .logo img {
+  max-height: 2rem;
+}
+.header_toggle > span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: #FFFFFF;
+  transition: all 0.3s ease-in-out;
+  transform-origin: 3px 1px;
+}
+.header_toggle > span:not(:last-child) {
+  margin-bottom: 5px;
+}
+.header_toggle.active {
+  background-color: #000;
+}
+.header_links a {
+  position: relative;
+  margin-right: 1rem;
+  color: #FFFFFF;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+}
+.header_menu {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #FFFFFF;
+  padding: 3rem 1.625rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+}
+.header_menu a {
+  display: block;
+  color: #000;
+  margin-bottom: 3rem;
+}
+.header_menu button {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  border-radius: 50px;
+  background: transparent;
+  border: 3px solid #000000;
+}
+.header_btn {
+  margin-right: 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  border-radius: 50px;
+}
+.header_btn1 {
+  border: none;
+  background: black;
+}
+.header_btn2 {
+  background: transparent;
+  border: 2px solid #ffffff;
+}
+
+.hero_img {
+  background-image: url("https://www.zestmoney.in/images/newhomeBanner.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.hero_img::before {
+  content: "";
+  position: absolute;
+  background-image: url("https://www.zestmoney.in/images/newhomeBannermob.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}/*# sourceMappingURL=main.css.map */
