@@ -1,9 +1,12 @@
 .article {
   //   padding: 0rem 0rem 1.5rem;
   &_1 {
-    height: 90vh;
+    height: 100vh;
     @include breakpoint-up(medium) {
         height:100vh;
+      }
+      @include breakpoint-up(large) {
+        height:85vh;
       }
     .mobBorder1 {
       position: absolute;
@@ -13,19 +16,37 @@
       @include breakpoint-up(medium) {
         margin:-5.2rem 0rem 0rem 38rem;
       }
-  
-      @include breakpoint-up(large) {
-      }
     }
     .mobBorder2 {
       position: absolute;
-      top: 67.6rem;
+      top: 69.3rem;
       z-index: -1;
       width: 10rem;
-      padding-top: 1rem;
       @include breakpoint-up(medium) {
         top: 83.8rem;
         }
+    }
+    .mobBorder3{
+      @include breakpoint-up(large) {
+        position: absolute;
+      z-index: -1;
+
+width: 25%;
+top: 41.5rem;
+margin-left: 48rem;
+              }
+    }
+    .mobBorder4{
+
+      @include breakpoint-up(large) {
+        position: absolute;
+      z-index: -1;
+
+width: 40%;
+top: 83rem;
+margin-left: 38.4rem;
+// overflow: hidden;
+              }
     }
     h1 {
       position: relative;
@@ -41,6 +62,12 @@
     padding: 0rem 3rem 0rem 4rem;
 
       }
+       @include breakpoint-up(large) {
+ font-size: 88px;
+    line-height: 6rem;
+    padding: 0rem 9rem 0rem 4rem;
+margin-top: -3rem;
+       }
     }
     p {
       position: relative;
@@ -51,15 +78,114 @@
       padding: 0rem 2rem 1.5rem 1.5rem;
       z-index: 1;
       @include breakpoint-up(medium) {
-      padding: 0rem 24rem 1rem 4rem;
+      margin-top: 0rem;
+      padding: 0rem 26rem 0rem 4rem;
       }
     }
     a {
       z-index: 1;
       display: flex;
       justify-content: center;
+      margin-top: 1rem;
       img {
         background-image: cover;
+      }
+      @include breakpoint-up(medium) {
+        padding: 0rem 0rem 0rem 0rem;
+        }
+    }
+  }
+  &_2{
+    position: absolute;
+    z-index: -1;
+      padding: 0rem 0rem 0rem 2rem;
+    background-color: #F2F2F2;
+    @include breakpoint-up(medium) {
+      position: absolute;
+      z-index: -3;
+      margin-top: -4rem;
+      padding: 0rem 0rem 0rem 4rem;
+      }
+      @include breakpoint-up(large) {
+        position: absolute;
+      z-index: -3;
+      margin-top: 0rem;
+      width: 100vw;
+        }
+    h1{
+      font-family: $fontPoppins;
+      font-size: 55px;
+      font-weight: 900;
+      line-height: 4rem;
+      // margin: 3rem 0rem 0rem 0rem;
+      padding: 5rem 0rem 1rem 0rem;
+      @include breakpoint-up(medium) {
+        font-size: 70px;
+        line-height: 5.5rem;
+        padding: 1rem 50% 0rem 0rem;
+        }
+        @include breakpoint-up(large) {
+        font-size: 115px;
+          line-height: 8.5rem;
+          padding: 0rem 50% 0rem 0rem;
+      margin-top: 4rem;
+
+          }
+    }
+    h3{
+      font-family: $fontPoppins;
+      font-size: 32px;
+      font-weight: 900;
+      margin-left: 1rem;
+      @include breakpoint-up(medium) {
+        // margin:-5.2rem 0rem 0rem 38rem;
+      }
+      @include breakpoint-up(medium) {
+        // margin:-5.2rem 0rem 0rem 38rem;
+      }
+    }
+    p{
+      font-family: $fontInter;
+      font-weight: 400;
+      font-size: 20px;
+      padding: 0rem 1.7rem 0rem 0rem;
+      line-height: 1.7rem;
+      @include breakpoint-up(medium) {
+      padding: 0rem 59.5% 0rem 0rem;
+      // margin:-5.2rem 0rem 0rem 38rem;
+      }
+      @include breakpoint-up(large) {
+        padding: 0rem 3.4rem 0rem 0rem;
+      }
+    }
+    &_btn{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-family: $fontPoppins;
+      font-weight: 600;
+      border: none;
+      font-size: 20px;
+      line-height: 28px;
+      background: #1FBA68;
+      color: #ffffff;
+      border-radius: 50px;
+      padding: 1rem 0.7rem 1rem 0.7rem;
+      margin: 2rem 0rem 2rem 0rem;
+    }
+    a{
+      display: flex;
+      justify-content: center;
+      padding: 2rem 0rem 2rem 0rem;
+      img {
+        background-image: cover;
+      }
+    }
+    .flexCol{
+      @include breakpoint-up(large) {
+        display: flex;
+        margin-top: -5rem;
       }
     }
   }
