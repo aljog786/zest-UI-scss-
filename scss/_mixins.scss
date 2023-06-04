@@ -3,9 +3,9 @@
 }
 
 
-$breakpoints-up:("medium":"425px","large":"1024px","xlarge":"1400px");
+$breakpoints-up:("medium":"640px","large":"1024px","xlarge":"1400px");
 
-$breakpoints-down:("small":"424px","medium":"1023px","large":"1399px");
+$breakpoints-down:("small":"639px","medium":"1023px","large":"1399px");
 
 @mixin breakpoint-up($size){
     @media (min-width:map-get($breakpoints-up,$size)) {
@@ -16,4 +16,16 @@ $breakpoints-down:("small":"424px","medium":"1023px","large":"1399px");
     @media (max-width:map-get($breakpoints-down,$size)) {
         @content;
     } 
+}
+@mixin longbtn{
+    position: relative;
+      z-index: 1;
+      font-family: $fontPoppins;
+      font-weight: 600;
+      border: none;
+      font-size: 20px;
+      line-height: 28px;
+      border-radius: 50px;
+      padding: 1rem 0.7rem 1rem 0.7rem;
+      margin: 2rem 0rem 1rem 2rem;
 }
