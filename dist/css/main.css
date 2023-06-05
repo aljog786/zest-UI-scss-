@@ -972,4 +972,37 @@ footer .logo img {
   background-size: cover;
   width: 7rem;
   padding: 0rem 0rem 2rem 0rem;
+}
+footer .accordion_head {
+  display: flex;
+  justify-content: space-between;
+}
+footer .accordion_head h3 {
+  color: white;
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  line-height: 1rem;
+}
+footer .accordion_head button {
+  background-color: transparent;
+  border: 0;
+}
+footer .accordion_head button.rotate {
+  transform: rotate(180deg);
+}
+footer .accordion_head button img {
+  height: 1rem;
+  background-size: cover;
+}
+footer .accordion_body .links {
+  list-style-type: none;
+}
+footer .accordion_body .links li {
+  position: relative;
+  color: white;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  margin: 0rem 0rem 2rem -2.5rem;
 }/*# sourceMappingURL=main.css.map */

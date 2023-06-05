@@ -1,12 +1,53 @@
-footer{
-    padding:3rem 2rem 0rem 2rem;
-    background-color: black;
-    .logo{
-        img{
-            background-size: cover;
-            width: 7rem;
-    padding:0rem 0rem 2rem 0rem;
-
+footer {
+  padding: 3rem 2rem 0rem 2rem;
+  background-color: black;
+  .logo {
+    img {
+      background-size: cover;
+      width: 7rem;
+      padding: 0rem 0rem 2rem 0rem;
+    }
+  }
+  .accordion {
+    &_item {
+        // 
+    }
+    &_head {
+        display:flex;
+        justify-content:space-between;
+        h3 {
+            color:white;
+          font-size: 20px;
+          font-family: $fontInter;
+          font-weight: 600;
+          line-height:1rem;
         }
+        button {
+            background-color:transparent;
+            border:0;
+            &.rotate {
+                transform: rotate(180deg);
+              }
+          img {
+            height:1rem;
+            background-size:cover;
+           
+          }
+        }
+      }
+      &_body {
+        .links {
+            list-style-type: none;
+            li{
+                position: relative;
+                color:white;
+                font-size: 16px;
+          font-family: $fontInter;
+          font-weight: 400;
+          margin:0rem 0rem 2rem -2.5rem;
+        //   right:0;
+            }
+        }
+      }
     }
 }

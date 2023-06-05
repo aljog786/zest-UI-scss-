@@ -65,3 +65,44 @@ const carouselItems = document.querySelectorAll('.carousel_item');
       currentIndex = (currentIndex - 1 + totalItems) % totalItems;
       carousel.style.transform = `translateX(-${currentIndex * 50}%)`;
     });
+
+    // accordion
+   
+    // Get all the accordion items
+const accordionItems = document.querySelectorAll('.accordion_item');
+
+// Add click event listener to each accordion item's head
+accordionItems.forEach(item => {
+  const head = item.querySelector('.accordion_head');
+  const button = head.querySelector('button');
+  head.addEventListener('click', function() {
+    toggleAccordion(item, button);
+  });
+});
+
+// Initialize accordions as closed
+accordionItems.forEach(item => {
+  const body = item.querySelector('.accordion_body');
+  body.style.display = 'none';
+});
+
+// Toggle the accordion body visibility and rotate the button
+function toggleAccordion(item, button) {
+  accordionItems.forEach(accItem => {
+    const body = accItem.querySelector('.accordion_body');
+    const accButton = accItem.querySelector('.accordion_head button');
+    
+    if (accItem !== item) {
+      accItem.classList.remove('active');
+      body.style.display = 'none';
+      accButton.classList.remove('rotate'); // Remove rotate class from the button
+    }
+  });
+
+  item.classList.toggle('active');
+  const body = item.querySelector('.accordion_body');
+  
+  body.style.display = body.style.display === 'block' ? 'none' : 'block';
+  button.classList.toggle('rotate'); // Toggle rotate class for the button
+}
+

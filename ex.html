@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        .accordion{
+            background-color:rgb(230, 59, 59);
+        }
+         .accordion_head {
+  display: flex;
+  justify-content: space-between;
+}
+ .accordion_head h3 {
+  color: white;
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  line-height: 1rem;
+}
+ .accordion_head button {
+  background-color: transparent;
+  border: 0;
+}
+.accordion_head button.rotate img {
+  transform: rotate(180deg);
+}
+
+ .accordion_head button img {
+  height: 1rem;
+  background-size: cover;
+}
+ .accordion_body .links {
+  list-style-type: none;
+}
+ .accordion_body .links li {
+  position: relative;
+  color: white;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  margin: 0rem 0rem 2rem -2.5rem;
+}
+    </style>
+    <title>accordion</title>
+  </head>
+  <body>
+    <div class="accordion">
+        <div class="accordion_item">
+          <div class="accordion_head">
+            <h3>PARTNERS</h3>
+            <button><img src="./dist/images/accd-arrow.png" /></button>
+          </div>
+          <div class="accordion_body">
+            <ul class="links">
+              <li>Flipkart</li>
+              <li>Amazon</li>
+              <li>MakeMyTrip</li>
+              <li>View All Partners</li>
+            </ul>
+          </div>
+          <hr />
+        </div>
+        <div class="accordion_item">
+          <div class="accordion_head">
+            <h3>SUPPORT</h3>
+            <button><img src="./dist/images/accd-arrow.png" /></button>
+          </div>
+          <div class="accordion_body">
+            <ul class="links">
+              <li>FAQs</li>
+              <li>Shop Smartly</li>
+              <li>EMI Guides</li>
+              <li>Security Information Center</li>
+              <li>Vulnerablity Disclosure Program</li>
+            </ul>
+          </div>
+          <hr />
+        </div>
+        <div class="accordion_item">
+          <div class="accordion_head">
+            <h3>COMPANY</h3>
+            <button><img src="./dist/images/accd-arrow.png" /></button>
+          </div>
+          <div class="accordion_body">
+            <ul class="links">
+              <li>About Us</li>
+              <li>Partner With Us</li>
+              <li>Refer & Earn</li>
+              <li>Lending Partners</li>
+              <li>Blog</li>
+              <li>Zest In News</li>
+              <li>Careers</li>
+              <li>Contact Us</li>
+            </ul>
+          </div>
+          <hr />
+        </div>
+      </div>
+      <script>
+      // Get all the accordion items
+const accordionItems = document.querySelectorAll('.accordion_item');
+
+// Add click event listener to each accordion item's head
+accordionItems.forEach(item => {
+  const head = item.querySelector('.accordion_head');
+  const button = head.querySelector('button');
+  head.addEventListener('click', function() {
+    toggleAccordion(item, button);
+  });
+});
+
+// Initialize accordions as closed
+accordionItems.forEach(item => {
+  const body = item.querySelector('.accordion_body');
+  body.style.display = 'none';
+});
+
+// Toggle the accordion body visibility and rotate the button
+function toggleAccordion(item, button) {
+  accordionItems.forEach(accItem => {
+    const body = accItem.querySelector('.accordion_body');
+    const accButton = accItem.querySelector('.accordion_head button');
+    
+    if (accItem !== item) {
+      accItem.classList.remove('active');
+      body.style.display = 'none';
+      accButton.classList.remove('rotate'); // Remove rotate class from the button
+    }
+  });
+
+  item.classList.toggle('active');
+  const body = item.querySelector('.accordion_body');
+  
+  body.style.display = body.style.display === 'block' ? 'none' : 'block';
+  button.classList.toggle('rotate'); // Toggle rotate class for the button
+}
+
+
+      </script>
+      
+      
+  </body>
+</html>
